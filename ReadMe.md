@@ -2,7 +2,7 @@
 
 Heraut, the herald of pythonic message passing.
 
-A python 3.6+ package for message passing between threads.
+A python 3.6+ package for message passing between threads and processes.
 
 ## Minimal example:
 
@@ -24,9 +24,10 @@ sender.stop_listener(target='process B')
 import  heraut
 
 listener = heraut.Listener()
-while listener.listening():
+flag = True
+while flag and listener.listening():
     # get the message
-    message, label, metadata = listener.get_message()
+    flag, message, label, metadata = listener.get_message()
     # do something with the message
     print(message)
 # Shut down the listner. 

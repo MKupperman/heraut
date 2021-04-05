@@ -5,6 +5,7 @@ import hashlib
 import datetime
 from .coreUtils import SigKill
 
+
 class Sender(object):
     def __init__(self, path=None, name=''):
         self.name = name
