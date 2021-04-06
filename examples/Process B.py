@@ -1,4 +1,4 @@
-import heraut
+from src import heraut
 
 listener = heraut.Listener(name='process B')
 flag = True

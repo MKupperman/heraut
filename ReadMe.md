@@ -7,8 +7,10 @@ A python 3.6+ package for message passing between threads and processes.
 ## Minimal example:
 
 #### Sending Information
+
 ```python
-import heraut
+
+from src import heraut
 
 # Initialize the sender, once per process per sender
 sender = heraut.Sender(name='process A')
@@ -21,7 +23,8 @@ sender.stop_listener(target='process B')
 #### Recieving Information
 
 ```python
-import  heraut
+
+from src import heraut
 
 listener = heraut.Listener()
 flag = True

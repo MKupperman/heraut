@@ -1,4 +1,4 @@
-import heraut
+from src import heraut
 
 # Initialize the sender, once per process per sender
 sender = heraut.Sender(name='process A')
